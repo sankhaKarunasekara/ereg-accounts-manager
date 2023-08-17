@@ -14,7 +14,7 @@
 		"*://www.customs.gov.lk/registrations/adminApplicationView/*",
 		"*://customs.gov.lk/registrations/adminApplicationView/*",
 		"*://ereg.customs.gov.lk/registrations/adminApplicationView/*",
-		"*://https://ereg.customs.gov.lk/registrations/loadRMUAdmin/*"
+		"*://ereg.customs.gov.lk/registrations/loadRMUAdmin/*"
 	],
 	"browser_action": {
 		"default_icon": "icon.png",
