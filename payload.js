@@ -79,7 +79,7 @@ function getCompanyDetails() {
         var EMAIL = document.getElementsByName("DEC_EML_DES")[0].value;
 
     } catch (e) {
-
+        console.error(e)
     }
 
     return {

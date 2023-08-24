@@ -13,35 +13,50 @@
 </head>
 
 <body>
-	<div style="width: auto; min-width: 400	px">
-		<div id="COMPANY_SECTION">
-			<h3 style="padding:4px">Update Expiry Date</h3>
+	<div style="width: auto; min-width: 600px">
+		<div id="COMPANY_SECTION" style="font-family: Arial, sans-serif; padding: 10px;">
+			<h2 style="color: #4A90E2; padding: 4px;">Update Expiry Date</h2>
 			<h4>COMPANY_NAME: <span id='COMPANY_NAME'></span></h4>
 			<h4 id="VAT_HEADER">VAT NO: <span id='VAT_NO'></span></h4>
 			<h4>TIN NO: <span id='TIN_NO'></span></h4>
 			<h4 id="VAT_EXPIRY_DATE_HEADING">VAT_EXPIRY_DATE: <span id='VAT_EXPIRY_DATE'></span></h4>
-			<h4>ACTIVATE FROM: <input type="date" id="ACTIVATE_FROM_DATE"></h4>
-			<h4>ACTIVATE TILL: <input type="date" id="ACTIVATE_TILL_DATE"></h4>
-			<!-- <h4>SMS: <span id='SMS'></span></h4> -->
-			<!-- <h4>DETAILS: <span id='EXLIST2'></span></h4> -->
-			<h4 style="vertical-align:center">REMARKS: </h4>
-			<textarea style="min-width:380px; max-width:90%;min-height:50px;height:100%;width:90%; margin-bottom:12px;"
+			<h4>ACTIVATE FROM: <input type="date" id="ACTIVATE_FROM_DATE"
+					style="border: 1px solid #4A90E2; margin-left: 10px;"></h4>
+			<h4>ACTIVATE TILL: <input type="date" id="ACTIVATE_TILL_DATE"
+					style="border: 1px solid #4A90E2; margin-left: 10px;"></h4>
+			<h4 style="vertical-align: center;">REMARKS: </h4>
+			<textarea
+				style="min-width:380px; max-width:90%; min-height:50px; height:100%; width:90%; margin-bottom:12px; border: 1px solid #4A90E2;"
 				id='REMARKS'></textarea>
-			<button id='updateButton' style="padding: 12px 60px;">UPDATE</button>
-			<button id='clearButton' style="padding: 12px 60px;">CLEAR</button>
+			<button id='updateButton'
+				style="background-color: #4A90E2; color: #ffffff; padding: 12px 60px; border: none; cursor: pointer;">UPDATE</button>
+			<button id='clearButton' style="padding: 12px 60px; border: none; cursor: pointer;">CLEAR</button>
+			<div id="INFO_MESSAGE"
+				style="display: none; border: 1px solid #00BFFF; padding: 10px; margin: 4px; background-color: #f0f8ff; color: #000;">
+				<strong>Message:</strong> ASYCUDA Updated! 🔄 The new expiry date of the company set to: <strong
+					id="EXP_DATE_SET"></strong>
+			</div>
 		</div>
-		<div id="ALL_SECTION">
-			<h3>Scheduled Account Deactivations</h3>
-			<h4>GET EXPIRY ON: <input type="date" id="ACTIVATE_TILL_DATE"></h4> <button id='generateExpListButton'
-				style="padding: 12px">GENERATE</button>
-			<table border="1" id="vatTable" style="margin: 4px;">
+		<div id="ALL_SECTION" style="font-family: Arial, sans-serif; padding: 10px;">
+			<h2 style="color: #4A90E2;">Scheduled Account Deactivations</h2>
+			<div>
+				<h4 style="display: inline; color: #4A90E2;">GET EXPIRY ON: <input type="date" id="GET_EXPIRY_ON"
+						style="border: 1px solid #4A90E2;"></h4>
+				<button id='generateExpListButton' style="margin-left:4px; background-color: #4A90E2; color: #ffffff; padding: 8px; border: none; cursor: pointer;
+					display: inline-block;
+     background-color: #4A90E2;
+     color: white;
+					">GENERATE</button>
+			</div>
+			<table border="1" id="vatTable"
+				style="margin-left: 0px; margin-top:8px; border-collapse: collapse; width: 100%;">
 				<thead>
-					<tr>
-						<th>INDEX</th>
-						<th>VAT</th>
-						<th>COMPANY NAME</th>
-						<th>ADDRESS</th>
-						<th>ACTION</th>
+					<tr style="background-color: #f2f2f2;">
+						<th style="padding: 8px; text-align: left;">INDEX</th>
+						<th style="padding: 8px; text-align: left;">VAT</th>
+						<th style="padding: 8px; text-align: left;">COMPANY NAME</th>
+						<th style="padding: 8px; text-align: left;">ADDRESS</th>
+						<th style="padding: 8px; text-align: left;">ACTION</th>
 					</tr>
 				</thead>
 				<tbody id="EXPLIST">
